@@ -1,0 +1,22 @@
+<!--pages/news/news.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatoractivecolor}}" 
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<block wx:for="{{useData}}" wx:for-item="item" wx:key="item.newsid">
+  <view class='articlelist'>
+    <view class='author-time'>
+      <image class='author-icon' src='{{item.authoricon}}'></image>
+      <text class='author-name'>{{item.authorname}}</text>
+      <text class='author-date'>{{item.authordate}}</text>
+    </view>
+    <text class='title'>{{item.title}}</text>
+    <image class='article-img'  src='{{item.articleimg}}'></image>
+    <text class='article-text'>{{item.articletext}}</text>
+  </view>
+</block>
+

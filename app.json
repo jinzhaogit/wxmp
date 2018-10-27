@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/news/news" 
+  ],
+  "window":{
+    "backgroundTextStyle":"#fff",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "酷狗音乐",
+    "navigationBarTextStyle":"#fff"
+  }
+}
