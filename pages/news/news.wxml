@@ -1,4 +1,5 @@
-<!--pages/news/news.wxml-->
+<import src="news-template/news-template.wxml" />
+
 <swiper indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatoractivecolor}}" 
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{imgUrls}}">
@@ -7,16 +8,9 @@
     </swiper-item>
   </block>
 </swiper>
-<block wx:for="{{useData}}" wx:for-item="item" wx:key="item.newsid">
-  <view class='articlelist'>
-    <view class='author-time'>
-      <image class='author-icon' src='{{item.authoricon}}'></image>
-      <text class='author-name'>{{item.authorname}}</text>
-      <text class='author-date'>{{item.authordate}}</text>
-    </view>
-    <text class='title'>{{item.title}}</text>
-    <image class='article-img'  src='{{item.articleimg}}'></image>
-    <text class='article-text'>{{item.articletext}}</text>
+<block wx:for="{{useData}}" wx:for-item="item" wx:key="item.newsid"> 
+  <view bindtap="goNewsDetail" data-newsid="{{item.newsid}}">
+    <template is="newsTemplate" data="{{...item}}" />
   </view>
 </block>
 

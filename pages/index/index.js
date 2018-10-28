@@ -11,8 +11,8 @@ Page({
   },
   //事件处理函数
   goNewsTap: function() {
-    // 路由跳转
-    wx.navigateTo({
+    // 路由跳转到taber页
+    wx.switchTab({
       url: '../news/news',
     })
   }

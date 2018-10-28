@@ -1,12 +1,25 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/news/news" 
+    "pages/news/news",
+    "pages/music/music",
+    "pages/news/news-detail/news-detail"
   ],
-  "window":{
-    "backgroundTextStyle":"#fff",
+  "window": {
+    "backgroundTextStyle": "#fff",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "酷狗音乐",
-    "navigationBarTextStyle":"#fff"
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/news/news",
+      "text": "新闻"
+    }, {
+      "pagePath": "pages/music/music",
+      "text": "音乐"
+    }],
+    "selectedColor":"#0c8ed9"
+
   }
 }

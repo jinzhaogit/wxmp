@@ -1,0 +1,2 @@
+<!--pages/news/news-detail/news-detail.wxml-->
+<text>我是ID为{{newsId}}的详情</text>
